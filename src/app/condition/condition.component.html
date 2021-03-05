@@ -1,0 +1,78 @@
+<h1>{{title}}</h1>
+<div *ngIf="success_msg; then success_msg else error_msg">
+  This is if condition true;
+</div>
+<ng-template #success_msg>
+  This is if success_msg condition true;
+</ng-template>
+
+<ng-template #error_msg>
+  This is else condition true;
+</ng-template>
+
+<ul>
+   <li *ngFor="let contact of contacts; index as i; first as f;
+              last as l">
+     <div *ngIf="f">
+       This is first contact
+     </div>
+     <div *ngIf="l">
+      This is last contact
+    </div>
+    {{i}}  {{contact.firstName}} {{contact.lastName}}
+   </li>
+</ul>
+
+<ul>
+  <li *ngFor="let contact of contacts; index as i; even as e; odd as o">
+    <div *ngIf="e" style="background: rgb(182, 176, 176)">
+      {{i}}  {{contact.firstName}} {{contact.lastName}}
+    </div>
+    <div *ngIf="o" style="background: rgb(247, 243, 243)">
+      {{i}}  {{contact.firstName}} {{contact.lastName}}
+    </div>
+  </li>
+</ul>
+
+<h4>Learning ngSwitch</h4>
+<div [ngSwitch]="superPower">
+  <div *ngSwitchCase="'wonderWoman'">Display Wonder Woman supper powers</div>
+  <div *ngSwitchCase="'superMan'">Display Super Man supper powers</div>
+  <div *ngSwitchCase="'heMan'">Display He man supper powers</div>
+  <div *ngSwitchCase="'batMan'">Display Bat man  supper powers</div>
+  <div *ngSwitchDefault>This is default case of switch ngSwitchCase</div>
+</div>
+
+<div [ngStyle]="{'background-color': 'green', 'color':'#fff'}">This is green div</div>
+
+<div [ngStyle]="{'background-color': styleProp}">This is dynamic style  </div>
+
+<div [ngStyle]="{'color': txColor === 'red'? 'red' : 'green'}">This is conditional style  </div>
+
+<div [ngClass]="'c1'">This is ngClass example</div>
+
+<div [ngClass]="dynamicClass">This is ngClass using variable example</div>
+
+<div [ngClass]="conditionalClass === 'c4'? 'c4' : 'c5'">This is ngClass using conditional example</div>
+
+<div [ngClass]="{c4: true, c6: true}">This is ngClass using object</div>
+
+<div [ngClass]="getClsName()">This is ngClass using method</div>
+
+<div>{{ lowerCasePipe | lowercase }}</div>
+<div>{{ upperCasePipe | uppercase }}</div>
+<div>{{ dateExamplePipe | date }}</div>
+<div>Long: {{ dateExamplePipe | date: "long" }}</div>
+<div>Short: {{ dateExamplePipe | date: "short" }}</div>
+<div>{{ dateExamplePipe | date: "MM-dd-yyyy" }}</div>
+<div>{{ currencyExamplePipe | currency: "EUR"  }}</div>
+<div>{{ currencyExamplePipe | currency: "GBP"  }}</div>
+<div>{{ currencyExamplePipe | currency  }}</div>
+<div>{{ percentageExamplePipe | percent }}</div>
+<div>(minimumBeforeDecimal.minimumDecimal-maxDecimal {{ percentageExamplePipe | percent: '2.1-4' }}</div>
+<div>{{ jsonObject | json }}</div>
+
+<h3>Chaining pipe</h3>
+<div>{{ dateExamplePipe | date | uppercase }}</div>
+<div>{{ currencyExamplePipe | currency: "CAD" | lowercase  }}</div>
+
