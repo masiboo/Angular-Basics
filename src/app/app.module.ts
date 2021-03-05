@@ -13,6 +13,7 @@ import { SearchComponent } from './search/search.component';
 import { NotFound404Component } from './not-found404/not-found404.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import {FormsModule} from '@angular/forms';
+import { SimpleFormComponent } from './simple-form/simple-form.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {FormsModule} from '@angular/forms';
     ClientsComponent,
     SearchComponent,
     NotFound404Component,
-    AddCustomerComponent
+    AddCustomerComponent,
+    SimpleFormComponent
   ],
   imports: [
     BrowserModule,

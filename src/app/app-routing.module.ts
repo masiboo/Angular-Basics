@@ -9,6 +9,7 @@ import { ProductComponent } from './product/product.component';
 import { SearchComponent } from './search/search.component';
 import {AuthGuard} from './auth.guard';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { SimpleFormComponent } from './simple-form/simple-form.component';
 
 
 const routes: Routes = [
@@ -47,8 +48,8 @@ const routes: Routes = [
     loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
   },
   {
-    path: 'add-customer',
-    component: AddCustomerComponent
+    path: 'simple-form',
+    component: SimpleFormComponent
   },
 
   {

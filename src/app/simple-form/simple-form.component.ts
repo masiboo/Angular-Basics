@@ -3,12 +3,11 @@ import { NgForm } from '@angular/forms';
 
 
 @Component({
-  selector: 'app-add-customer',
-  templateUrl: './add-customer.component.html',
-  styleUrls: ['./add-customer.component.css']
+  selector: 'app-simple-form',
+  templateUrl: './simple-form.component.html',
+  styleUrls: ['./simple-form.component.css']
 })
-export class AddCustomerComponent implements OnInit {
-
+export class SimpleFormComponent implements OnInit {
   firstName: string = '';
   terms: boolean = false;
   customerType: string = '';
