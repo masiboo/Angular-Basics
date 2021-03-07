@@ -12,7 +12,7 @@ import { ClientsComponent } from './clients/clients.component';
 import { SearchComponent } from './search/search.component';
 import { NotFound404Component } from './not-found404/not-found404.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
 
 @NgModule({
@@ -32,7 +32,8 @@ import { SimpleFormComponent } from './simple-form/simple-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

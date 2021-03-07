@@ -1,1 +1,19 @@
 <p>loan-types works!</p>
+
+
+  <form [formGroup]="addLoanTypesForm">
+
+    <div class="form-group">
+      <input type="text" formControlName="loanName" (keyup)="trackChanges()" > <br/>
+      <div class="text-danger" *ngIf="addLoanTypesForm.get('loanName')?.hasError('minlength') && addLoanTypesForm.get('loanName')?.touched  ">This field minLength is 4 </div>
+      <div class="text-danger" *ngIf="addLoanTypesForm.get('loanName')?.hasError('maxlength') && addLoanTypesForm.get('loanName')?.touched  ">This field max length is 10 </div>
+      <div class="text-danger" *ngIf="addLoanTypesForm.get('loanName')?.hasError('required') && addLoanTypesForm.get('loanName')?.touched  ">This field is required </div>
+    </div>
+    <input type="text" formControlName="loanType"> <br/>
+    <div *ngIf="addLoanTypesForm.get('loanType')?.hasError('required') && addLoanTypesForm.get('loanType')?.touched  ">This field is required </div>
+    <input type="checkbox" formControlName="terms"> Accept Terms! <br/>
+    <textarea fromControlName="loanDescription"></textarea><br/>
+    <button [disabled]="!addLoanTypesForm.valid" (click)="addLoanType()">Add Loan</button><br/>
+    <button (click)="resetForm()">Reset from</button>
+  </form>
+
