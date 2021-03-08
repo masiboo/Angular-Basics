@@ -10,6 +10,7 @@ import { SearchComponent } from './search/search.component';
 import {AuthGuard} from './auth.guard';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
+import { ParentComponent } from './parent/parent.component';
 
 
 const routes: Routes = [
@@ -51,7 +52,10 @@ const routes: Routes = [
     path: 'simple-form',
     component: SimpleFormComponent
   },
-
+  {
+    path: 'parent',
+    component: ParentComponent
+  },
   {
     path: '**',
     component: NotFound404Component

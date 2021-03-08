@@ -1,0 +1,3 @@
+<p>parent works!</p>
+<app-child (childEvent)="message=$event" [parentData] = "name"></app-child>
+<h2>{{'this is child msg: ' + message}}</h2>

@@ -14,6 +14,8 @@ import { NotFound404Component } from './not-found404/not-found404.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { SimpleFormComponent } from './simple-form/simple-form.component';
     SearchComponent,
     NotFound404Component,
     AddCustomerComponent,
-    SimpleFormComponent
+    SimpleFormComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
