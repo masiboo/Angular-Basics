@@ -16,6 +16,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { TeacherComponent } from './teacher/teacher.component';
+import { StudentComponent } from './student/student.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ChildComponent } from './child/child.component';
     AddCustomerComponent,
     SimpleFormComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    TeacherComponent,
+    StudentComponent
   ],
   imports: [
     BrowserModule,
